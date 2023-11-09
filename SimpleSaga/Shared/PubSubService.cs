@@ -7,6 +7,12 @@ namespace SimpleSaga.Shared
     public interface IPubSubService
     {
         void Subscribe<T>(string channel, Action<T> action);
+        /// <summary>
+        /// Channel or Topic
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="channel"></param>
+        /// <param name="message"></param>
         void Publish<T>(string channel, T message);
     }
 
